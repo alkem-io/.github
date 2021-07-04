@@ -1,24 +1,24 @@
 ## Reporting a Vulnerability - Private Disclosure Process
-Security is of the highest importance and all security vulnerabilities or suspected security vulnerabilities should be reported to Cherrytwist privately, to minimize attacks against current users of Cherrytwist before they are fixed. Vulnerabilities will be investigated and patched on the next patch (or minor) release as soon as possible. This information could be kept entirely internal to the project.  
+Security is of the highest importance and all security vulnerabilities or suspected security vulnerabilities should be reported to Alkemio privately, to minimize attacks against current users of Alkemio before they are fixed. Vulnerabilities will be investigated and patched on the next patch (or minor) release as soon as possible. This information could be kept entirely internal to the project.  
 
-If you know of a publicly disclosed security vulnerability for Cherrytwist, please **IMMEDIATELY** contact security@cherrytwist.org to inform the Cherrytwist Security Team.
+If you know of a publicly disclosed security vulnerability for Alkemio, please **IMMEDIATELY** contact security@alkem.io to inform the Alkemio Security Team.
  
 **IMPORTANT: Do not file public issues on GitHub for security vulnerabilities**
 
-To report a vulnerability or a security-related issue, please email the private address security@cherrytwist.org with the details of the vulnerability. The email will be fielded by the Cherrytwist Security Team, which is made up of Cherrytwist maintainers who have committer and release permissions. Emails will be addressed within 5 business days, including a detailed plan to investigate the issue and any potential workarounds to perform in the meantime. Do not report non-security-impacting bugs through this channel. 
+To report a vulnerability or a security-related issue, please email the private address security@alkem.io with the details of the vulnerability. The email will be fielded by the Alkemio Security Team, which is made up of Alkemio maintainers who have committer and release permissions. Emails will be addressed within 5 business days, including a detailed plan to investigate the issue and any potential workarounds to perform in the meantime. Do not report non-security-impacting bugs through this channel. 
 
 ### Proposed Email Content
 Provide a descriptive subject line and in the body of the email include the following information:
 * Basic identity information, such as your name and your affiliation or company.
 * Detailed steps to reproduce the vulnerability  (POC scripts, screenshots, and compressed packet captures are all helpful to us).
-* Description of the effects of the vulnerability on Cherrytwist and the related hardware and software configurations, so that the Cherrytwist Security Team can reproduce it.
-* How the vulnerability affects Cherrytwist usage and an estimation of the attack surface, if there is one.
-* List other projects or dependencies that were used in conjunction with Cherrytwist to produce the vulnerability.
+* Description of the effects of the vulnerability on Alkemio and the related hardware and software configurations, so that the Alkemio Security Team can reproduce it.
+* How the vulnerability affects Alkemio usage and an estimation of the attack surface, if there is one.
+* List other projects or dependencies that were used in conjunction with Alkemio to produce the vulnerability.
  
 ## When to report a vulnerability
-* When you think Cherrytwist has a potential security vulnerability.
-* When you suspect a potential vulnerability but you are unsure that it impacts Cherrytwist.
-* When you know of or suspect a potential vulnerability on another project that is used by Cherrytwist.
+* When you think Alkemio has a potential security vulnerability.
+* When you suspect a potential vulnerability but you are unsure that it impacts Alkemio.
+* When you know of or suspect a potential vulnerability on another project that is used by Alkemio.
 
 ## Do's:
 
