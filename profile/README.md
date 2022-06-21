@@ -2,7 +2,7 @@
 **a new way of working on challenges, together**
 
 ### Why Alkemio
-Many Challenges in society and organizations are hard to solve. From refugee crises to climate change to a digitalizing society to community initiatives. People want to engage in effective and meaningful ways - but how?
+Many Challenges in society and organizations are hard to solve. From refugee crises to climate change to a digitalizing society to community initiatives. People want to engage in effective and meaningful ways - _but how?_
 
 Alkemio makes it easy to manage Challenges and have contributors, from anywhere, working together on solutions. Challenges take center-stage. Focus is on the destination.
 
@@ -11,5 +11,5 @@ Backed by a foundation to develop the Alkemio platform and community of people, 
 Connect, collaborate and contribute!
 
 ### Getting started
-Please read further about Alkemio and how to contribute using the [alkemio](./alkemio) repository.
+Please read further about Alkemio and how to contribute using the [alkemio](https://github.com/alkem-io/alkemio) repository.
 
