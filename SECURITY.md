@@ -45,7 +45,7 @@ Provide a descriptive subject line and in the body of the email include the foll
 - We will keep you informed of the progress towards resolving the problem.
 - In the public information concerning the reported problem, we will give your name as the discoverer of the problem (unless you desire otherwise).
 
-We strive to resolve all problems as quickly as possible, and we  would like to play an active role in the ultimate publication on the  problem after it is resolved.
+We strive to resolve all problems as quickly as possible, and we would like to play an active role in the ultimate publication on the problem after it is resolved. We are not in the postion to make any financial award for reporting vulnerabilities, but really appreciate anybody helping us in keeping Alkemio safe and secure.
 
 This Responsible Disclosure policy is based on an example written by [Harbor](https://goharbor.io/) and the [Responsible Disclosure Guideline of the NCSC](https://english.ncsc.nl/publications/publications/2019/juni/01/coordinated-vulnerability-disclosure-the-guideline).
 
