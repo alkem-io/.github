@@ -1,0 +1,13 @@
+# Org-default configuration for the DCO GitHub App (https://github.com/apps/dco,
+# app id 1861). Applies to every alkem-io repository without its own
+# .github/dco.yml (Probot org-fallback); per-repo overrides are intentionally
+# not introduced (ADR 0008 §3, workspace#035-dco-migration).
+#
+# require.members: true — binding operator ruling Q7 (2026-08-04): every
+# commit, including from organisation members, carries a Signed-off-by
+# trailer. Commit signing authenticates identity; sign-off declares the
+# DCO 1.1 certification. Agent/bot delivery flows automate the trailer
+# (dark-factory mode); GitHub App identities (login ending "[bot]") are
+# skipped by the App itself.
+require:
+  members: true
