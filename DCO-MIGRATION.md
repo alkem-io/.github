@@ -1,6 +1,6 @@
 # CLA → DCO migration notice
 
-As of the cut-over date (**TBD — finalized at enforcement switch**), the
+As of the cut-over date (**TBD-AT-H6**), the
 Alkemio organisation enforces the
 [Developer Certificate of Origin v1.1](https://developercertificate.org/)
 (DCO) on every pull request, replacing the previous Contributor License

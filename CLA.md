@@ -1,6 +1,6 @@
 # Alkemio Contributor License Agreement (retired)
 
-> **Retired for new contributions as of the DCO cut-over date (TBD at cut-over).**
+> **Retired for new contributions as of the DCO cut-over date (TBD-AT-H6).**
 > Contributions from that date onward are certified under the
 > [Developer Certificate of Origin v1.1](https://developercertificate.org/) —
 > see the [DCO section of CONTRIBUTING](CONTRIBUTING.md#developer-certificate-of-origin)
