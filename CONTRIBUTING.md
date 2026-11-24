@@ -7,6 +7,26 @@ Please note we have a ![code of conduct](CODE_OF_CONDUCT.md), please follow it i
 
 For security, we only allow for [signed commits](https://help.github.com/en/github/authenticating-to-github/signing-commits) to be merged into master. This is to prevent [git spoofing](https://cybermundus.com/post/git-spoofing/). If you are new to signing your commits, don't worry! For some helpful starting points you can look here: [commit signing in github](https://help.github.com/en/github/authenticating-to-github/signing-commits), [Signing your work](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work), and [Qubes-OS guide to PGP and signed commits](https://www.qubes-os.org/doc/code-signing/).
 
+## Developer Certificate of Origin
+
+All contributions are certified under the [Developer Certificate of Origin v1.1](https://developercertificate.org/) (DCO).
+Every commit must carry a `Signed-off-by` trailer matching your Git identity:
+
+    git commit -s -m "your commit message"
+
+which appends a trailer of the form:
+
+    Signed-off-by: Your Name <your@email.com>
+
+If you already created commits without a sign-off, fix them without losing your work:
+
+    git rebase --signoff HEAD~<number of commits>
+    git push --force-with-lease
+
+A `DCO` status check enforces this on every pull request. Sign-off complements the mandatory
+commit signing above: signing cryptographically authenticates *who* made the commit, while the
+sign-off declares that you have the *right* to submit the work under the project's licence.
+
 ## Pull Request Process
 We use the [Fork&Pull](https://guides.github.com/activities/forking/) method for contributing. 
 
