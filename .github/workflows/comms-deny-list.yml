@@ -1,0 +1,63 @@
+# Reusable workflow. Place at: alkem-io/.github/.github/workflows/comms-deny-list.yml
+# Rule file:   alkem-io/.github/comms/deny-list.json
+# Checker:     alkem-io/.github/comms/deny_list_check.py
+#
+# Scans the calling repo for deprecated Alkemio identity values (old LinkedIn
+# slugs, retired taglines, wrong entity names, wrong licence string).
+# mode: warn    -> annotations only, never fails
+# mode: enforce -> fails the job on error-level findings
+
+name: comms-deny-list
+
+on:
+  workflow_call:
+    inputs:
+      mode:
+        description: "warn or enforce"
+        type: string
+        default: warn
+      approved:
+        description: "Comma-separated approved decisions, e.g. D1,D2"
+        type: string
+        default: ""
+      rules_ref:
+        description: "Git ref of alkem-io/.github to take the rules from"
+        type: string
+        default: master
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out calling repo
+        uses: actions/checkout@v4
+        with:
+          path: ${{ github.event.repository.name }}
+
+      - name: Check out central rules
+        uses: actions/checkout@v4
+        with:
+          repository: alkem-io/.github
+          ref: ${{ inputs.rules_ref }}
+          path: central
+          sparse-checkout: comms
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scan
+        run: |
+          set +e
+          python3 central/comms/deny_list_check.py "${{ github.event.repository.name }}" \
+            --rules central/comms/deny-list.json \
+            --approved "${{ inputs.approved }}" \
+            --format github \
+            $([ "${{ inputs.mode }}" = "enforce" ] && echo "--ci")
+          status=$?
+          python3 central/comms/deny_list_check.py "${{ github.event.repository.name }}" \
+            --rules central/comms/deny-list.json \
+            --approved "${{ inputs.approved }}" >> "$GITHUB_STEP_SUMMARY"
+          exit $status

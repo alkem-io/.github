@@ -1,0 +1,234 @@
+{
+  "$comment": "Deprecated values that must not appear in Alkemio repositories. Consumed by scripts/deny_list_check.py (sweep and CI). 'gate' says which decision must be signed off before the rule is enforced as an error: 'none' = enforce now. Paths in 'exclude' are glob fragments matched against the repo-relative path. v2.0.0 (24 Sep 2026): tagline decided as 'Collaboration in the spaces between organisations'; all other taglines retired and ungated. v3.0.0 (25 Sep 2026): D2, D3, D4, D5, D6, D8 decided; Bluesky rule added.",
+  "version": "3.0.0",
+  "canonical": {
+    "linkedin": "https://www.linkedin.com/company/alkemio",
+    "github": "https://github.com/alkem-io",
+    "brand": "Alkemio"
+  },
+  "globalExclude": [
+    "/node_modules/",
+    "/.git/",
+    "/dist/",
+    "/build/",
+    "/.next/",
+    "/coverage/",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "yarn.lock",
+    "go.sum",
+    "/generated/",
+    "schema.graphql",
+    "schema-lite.graphql",
+    "schema-baseline.graphql",
+    "specs/",
+    ".specify/",
+    "_archive/",
+    "CHANGELOG",
+    "comms/deny-list.json"
+  ],
+  "rules": [
+    {
+      "id": "LI-001",
+      "pattern": "linkedin\\.com/company/alkemio-foundation",
+      "severity": "error",
+      "gate": "none",
+      "message": "Old LinkedIn company slug.",
+      "replacement": "https://www.linkedin.com/company/alkemio"
+    },
+    {
+      "id": "LI-002",
+      "pattern": "linkedin\\.com/company/alkemio-bv",
+      "severity": "error",
+      "gate": "none",
+      "message": "Old LinkedIn company slug.",
+      "replacement": "https://www.linkedin.com/company/alkemio"
+    },
+    {
+      "id": "LI-003",
+      "pattern": "(?<!www)\\b[a-z]{2}\\.linkedin\\.com/company/alkemio",
+      "severity": "error",
+      "gate": "none",
+      "message": "Locale subdomain on the LinkedIn URL (for example nl.linkedin.com). Use www.",
+      "replacement": "https://www.linkedin.com/company/alkemio"
+    },
+    {
+      "id": "LI-004",
+      "pattern": "linkedin\\.com/company/753832",
+      "severity": "warn",
+      "gate": "none",
+      "message": "Numeric LinkedIn ID. Fine for internal integrations, never in public copy.",
+      "replacement": "https://www.linkedin.com/company/alkemio"
+    },
+    {
+      "id": "LI-005",
+      "pattern": "content\\.linkedin\\.com/.*\\.svg",
+      "severity": "error",
+      "gate": "none",
+      "message": "Hot-linked SVG icon. SVG does not render in Outlook desktop or Gmail; host a PNG on an Alkemio domain.",
+      "replacement": "https://alkem.io/email/icons/linkedin-24.png (to be hosted)"
+    },
+    {
+      "id": "GH-001",
+      "pattern": "https?://www\\.github\\.com/alkem-io",
+      "severity": "warn",
+      "gate": "none",
+      "message": "Use github.com without www.",
+      "replacement": "https://github.com/alkem-io"
+    },
+    {
+      "id": "TAG-001",
+      "pattern": "Safe Spaces for Collaboration",
+      "severity": "error",
+      "gate": "none",
+      "message": "Retired tagline (July 2026 Comms Audit).",
+      "replacement": "\"Collaboration in the spaces between organisations\", or no tagline"
+    },
+    {
+      "id": "TAG-002",
+      "pattern": "Safe smart spaces for collective action",
+      "severity": "error",
+      "gate": "none",
+      "message": "Off-canon tagline.",
+      "replacement": "\"Collaboration in the spaces between organisations\", or no tagline"
+    },
+    {
+      "id": "TAG-003",
+      "pattern": "Accelerating impact",
+      "severity": "error",
+      "gate": "none",
+      "message": "Off-canon tagline.",
+      "replacement": "\"Collaboration in the spaces between organisations\", or no tagline"
+    },
+    {
+      "id": "TAG-004",
+      "pattern": "Your Digital Home for Collaboration",
+      "severity": "error",
+      "gate": "none",
+      "message": "Off-canon tagline.",
+      "replacement": "\"Collaboration in the spaces between organisations\", or no tagline"
+    },
+    {
+      "id": "TAG-005",
+      "pattern": "PURPOSE DRIVEN",
+      "severity": "error",
+      "gate": "none",
+      "message": "ALL CAPS strapline; breaks voice rules.",
+      "replacement": "\"Collaboration in the spaces between organisations\", or no tagline"
+    },
+    {
+      "id": "NAME-001",
+      "pattern": "\"author\"\\s*:\\s*\"A[Ll]kemio Foundation\"",
+      "severity": "warn",
+      "gate": "D2",
+      "message": "Package author uses the Stewards' entity. Naming rule D2: use the brand or the operating company.",
+      "replacement": "\"author\": \"Alkemio\"",
+      "exclude": [
+        "website/"
+      ]
+    },
+    {
+      "id": "NAME-002",
+      "pattern": "^\\s*name:\\s*Alkemio Foundation\\s*$",
+      "severity": "warn",
+      "gate": "D2",
+      "message": "OpenAPI contact name uses the Stewards' entity.",
+      "replacement": "name: Alkemio"
+    },
+    {
+      "id": "NAME-003",
+      "pattern": "Copyright \\d{4} Alkemio Foundation",
+      "severity": "warn",
+      "gate": "LEGAL",
+      "message": "Copyright holder in source header. Change only after legal sign-off. Add the EUPL-1.2 SPDX line now; change the holder only after legal confirmation.",
+      "replacement": "Per legal decision"
+    },
+    {
+      "id": "LIC-001",
+      "pattern": "\\bMIT\\b[^\\n]{0,40}Alkemio",
+      "severity": "error",
+      "gate": "none",
+      "message": "Licence stated as MIT; Alkemio code is EUPL-1.2.",
+      "replacement": "EUPL-1.2"
+    },
+    {
+      "id": "TAG-007",
+      "pattern": "Enabling society to collaborate",
+      "severity": "error",
+      "gate": "none",
+      "message": "Legacy tagline (Kratos auth email sign-off, old READMEs).",
+      "replacement": "\"Collaboration in the spaces between organisations\", or no tagline"
+    },
+    {
+      "id": "TAG-008",
+      "pattern": "Next level collaboration",
+      "severity": "error",
+      "gate": "none",
+      "message": "Deprecated tagline (July 2026 audit, deprecated list). Remove now.",
+      "replacement": "\"Collaboration in the spaces between organisations\", or no tagline"
+    },
+    {
+      "id": "TAG-009",
+      "pattern": "(?i)Empowering change ?makers",
+      "severity": "error",
+      "gate": "none",
+      "message": "Deprecated tagline (July 2026 audit, deprecated list; also uses a banned word). Remove now.",
+      "replacement": "\"Collaboration in the spaces between organisations\", or no tagline"
+    },
+    {
+      "id": "TAG-010",
+      "pattern": "Bridging the spaces between us",
+      "severity": "error",
+      "gate": "none",
+      "message": "Retired line (alkemio.org footer, blog header). One tagline only since 24 Sep 2026.",
+      "replacement": "\"Collaboration in the spaces between organisations\", or no tagline"
+    },
+    {
+      "id": "TAG-011",
+      "pattern": "(?i)Shared challenges\\.?,? Shared workspaces",
+      "severity": "error",
+      "gate": "none",
+      "message": "Retired campaign line (decision 24 Sep 2026: one tagline only).",
+      "replacement": "\"Collaboration in the spaces between organisations\""
+    },
+    {
+      "id": "TAG-012",
+      "pattern": "(?i)Gedeelde vraagstukken\\.?,? Gedeelde werkruimtes",
+      "severity": "error",
+      "gate": "none",
+      "message": "Retired campaign line, Dutch (decision 24 Sep 2026).",
+      "replacement": "\"Collaboration in the spaces between organisations\" (in the client-web Dutch locale: the approved Dutch tagline in canonical-identity.yaml)"
+    },
+    {
+      "id": "TAG-013",
+      "pattern": "(?i)solving shared challenges together|gedeelde vraagstukken samen oplossen",
+      "severity": "error",
+      "gate": "none",
+      "message": "Retired descriptor built on the retired campaign line.",
+      "replacement": "Alkemio is a European digital platform for collaboration in the spaces between organisations."
+    },
+    {
+      "id": "WORD-001",
+      "pattern": "(?i)(trusted )?collaboration infrastructure",
+      "severity": "warn",
+      "gate": "none",
+      "message": "Vault key-phrases §3: Alkemio is a platform, never 'infrastructure'.",
+      "replacement": "digital platform",
+      "exclude": [
+        "specs/",
+        "/_notes/",
+        "/1-Research/",
+        "/1-Market/",
+        "0-Terminology/key-phrases.md"
+      ]
+    },
+    {
+      "id": "BSKY-001",
+      "pattern": "bsky\\.app/profile/alkemio(\\.bsky\\.social)?(?![\\w.])",
+      "severity": "error",
+      "gate": "none",
+      "message": "Wrong Bluesky handle (D8: @alkem.io).",
+      "replacement": "https://bsky.app/profile/alkem.io"
+    }
+  ]
+}

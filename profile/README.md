@@ -1,14 +1,18 @@
-## Welcome to Alkemio - _Accelerating impact!_
-The trusted digital platform for empowering change makers to make better and faster progress_
+## Alkemio: collaboration in the spaces between organisations
 
-Change central. Alkemio puts the change to be achieved in the centre: not the organization, not the customer, but the change - enabling you to create momentum, align efforts with your stakeholders and with other communities, overcome silos, and scale impact.
+Alkemio is an open-source, European digital platform for collaboration in the spaces between organisations. Ecosystems, networks, coalitions, public-sector teams, universities and funders use it to convene, co-create, decide, document and deliver across organisational boundaries.
 
-End-to-end impact platform. Providing a dedicated space to work on your challenges, with tools, knowledge, guidance, and ability to break down challenges into parts/phases; building and engaging your community, connecting to other change makers, innovating and working together effectively towards meaningful goals. Flexible and tailored for your needs.
+Alkemio is steward-owned, hosted in Europe and licensed under the [EUPL-1.2](https://opensource.org/licenses/EUPL-1.2).
 
-Open source, with EU public values central. Bizarrely, society relies on digital platforms driven by private instead of public interests. On Alkemio data is not sold, attention is not sold. Algorithms are used to bring people together, encouraging inclusivity and diversity, instead of ads, clicks, profits and polarisation. And the openness and ownership of Alkemio is also in line with EU public values.
+### Start here
 
-Connect, collaborate and contribute!
+- **Website and platform:** [alkem.io](https://alkem.io)
+- **Documentation:** [alkem.io/documentation](https://alkem.io/documentation)
+- **Contribute:** read [CONTRIBUTING.md](https://github.com/alkem-io/.github/blob/master/CONTRIBUTING.md) and the [alkemio](https://github.com/alkem-io/alkemio) repository
+- **Security:** [report a vulnerability](https://github.com/alkem-io/.github/blob/master/SECURITY.md)
 
-### **Getting started**
-Please read further about Alkemio and how to contribute using the [alkemio](https://github.com/alkem-io/alkemio) repository.
+### Follow along
 
+- [LinkedIn](https://www.linkedin.com/company/alkemio): product and research updates
+- [Bluesky](https://bsky.app/profile/alkem.io)
+- [Blog](https://blog.alkem.io)
